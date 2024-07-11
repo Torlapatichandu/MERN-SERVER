@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: Auto Merge Main to Testing in Client
+=======
+name: Auto Merge Main to Testing
+>>>>>>> 2ccb20efe610ed4748ca24562a83bd85a74adedc
 
 on:
   push:
@@ -13,7 +17,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
+<<<<<<< HEAD
             token: ${{secrets.ACTIONS_PAT}}
+=======
+          token: ${{ secrets.ACTIONS_PAT }}  # Ensure correct secret name
+>>>>>>> 2ccb20efe610ed4748ca24562a83bd85a74adedc
 
       - name: Configure Git
         run: |
@@ -27,4 +35,8 @@ jobs:
         run: |
           git checkout testing
           git merge -X theirs main --allow-unrelated-histories
+<<<<<<< HEAD
           git push origin testing
+=======
+          git push origin testing
+>>>>>>> 2ccb20efe610ed4748ca24562a83bd85a74adedc
